@@ -103,4 +103,29 @@ public abstract class Student extends Person
                 name, getStudentType(), gpa, getGradeLevel());
 	}
 	
+	
+	public String getDetailedInfo() {
+	    StringBuilder info = new StringBuilder();
+	    info.append("=== 学生詳細情報 ===");
+	    info.append("学生ID: ").append(getId()).append(" ");
+	    info.append("氏名: ").append(getName()).append(" ");
+	    info.append("年齢: ").append(getAge()).append("歳");
+	    info.append("メールアドレス: ").append(getEmail()).append(" ");
+	    info.append("専攻: ").append(getMajor()).append(" ");
+	    info.append("====================");
+	    return info.toString();
+	}
+	
+	
+	public String getAgeCategory() {
+	    if (getAge() < 20) {
+	        return "10代";
+	    } else if (getAge() < 25) {
+	        return "20代前半";
+	    } else if (getAge() < 30) {
+	        return "20代後半";
+	    } else {
+	        return "30代以上";
+	    }
+	}
 }
