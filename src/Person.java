@@ -21,6 +21,10 @@ public abstract class Person {
 		log.info("Personを作成しました: {}", name);
 	}
 	
+	public Person() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
 	//年齢計算メソッド
 	public int getAge() {
 		return Period.between(birthDate, LocalDate.now()).getYears();
