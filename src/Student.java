@@ -23,6 +23,8 @@ public abstract class Student extends Person
 		this.enrollmentYear = enrollmentYear;
 		this.grades = new ArrayList<>();
 		this.gpa = 0.0;
+		
+		log.info("Studentを作成しました: {}", name);
 	}
 	
 	
